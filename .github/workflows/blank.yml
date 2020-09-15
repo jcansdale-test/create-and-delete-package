@@ -13,4 +13,5 @@ jobs:
       - run: npm init --scope ${{ github.repository_owner }} -y
 
       - run: npm publish
-
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
