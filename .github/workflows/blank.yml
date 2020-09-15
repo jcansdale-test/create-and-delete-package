@@ -6,6 +6,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: jcansdale/gpr@v0.1.257
+        with:
+          command: delete
+          path: ${{ github.repository }}
+          args: --force
+
       - uses: actions/setup-node@v1
         with:
           registry-url: https://npm.pkg.github.com
